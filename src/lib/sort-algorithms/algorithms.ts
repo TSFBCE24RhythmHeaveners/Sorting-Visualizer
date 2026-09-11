@@ -2,6 +2,7 @@ import RangeArraySizePowerOfTwo from '../components/RangeArraySizePowerOfTwo.sve
 import { bitonicSort } from './bitonic-sort';
 import { bogoSort } from './bogo-sort';
 import { bubbleSort } from './bubble-sort';
+import { bucketSort } from './bucket-sort';
 import { cocktailSort } from './cocktail-sort';
 import { combSort } from './comb-sort';
 import { countingSort } from './counting-sort';
@@ -19,6 +20,7 @@ import { radixSort } from './radix-sort';
 import { radixSortMSD } from './radix-sort-msd';
 import { selectionSort } from './selection-sort';
 import { shellSort } from './shell-sort';
+import { sleepSort } from './sleep-sort';
 import { stoogeSort } from './stooge-sort';
 import { timSort } from './tim-sort';
 import type { AlgorithmDefinition } from './types';
@@ -107,16 +109,23 @@ export const algorithms: AlgorithmDefinition[][] = [
     {
       name: 'Counting Sort',
       function: countingSort,
-      badge: 'new',
     },
     {
       name: 'Comb Sort',
       function: combSort,
-      badge: 'new',
     },
     {
       name: 'Intro Sort',
       function: introSort,
+    },
+    {
+      name: 'Sleep Sort',
+      function: sleepSort,
+      badge: 'new',
+    },
+    {
+      name: 'Bucket Sort',
+      function: bucketSort,
       badge: 'new',
     },
   ],
