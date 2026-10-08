@@ -1,13 +1,20 @@
 import RangeArraySizePowerOfTwo from '../components/RangeArraySizePowerOfTwo.svelte';
+import { binaryInsertionSort } from './binary-insertion-sort';
 import { bitonicSort } from './bitonic-sort';
+import { blockSort } from './block-sort';
 import { bogoSort } from './bogo-sort';
 import { bubbleSort } from './bubble-sort';
 import { bucketSort } from './bucket-sort';
+import { circleSort } from './circle-sort';
 import { cocktailSort } from './cocktail-sort';
 import { combSort } from './comb-sort';
 import { countingSort } from './counting-sort';
 import { cycleSort } from './cycle-sort';
+import { dualPivotSort } from './dual-pivot-sort';
+import { dualSelectionSort } from './dual-selection-sort';
 import { exchangeSort } from './exchange-sort';
+import { flagSort } from './flag-sort';
+import { gravitySort } from './gravity-sort';
 import { gnomeSort } from './gnome-sort';
 import { heapSort } from './heap-sort';
 import { insertionSort } from './insertion-sort';
@@ -15,12 +22,13 @@ import { introSort } from './intro-sort';
 import { mergeSort } from './merge-sort';
 import { oddEvenSort } from './odd-even-sort';
 import { pancakeSort } from './pancake-sort';
+import { pigeonholeSort } from './pigeon-hole-sort';
 import { quickSort } from './quick-sort';
 import { radixSort } from './radix-sort';
 import { radixSortMSD } from './radix-sort-msd';
 import { selectionSort } from './selection-sort';
 import { shellSort } from './shell-sort';
-import { sleepSort } from './sleep-sort';
+import { smoothSort } from './smooth-sort';
 import { stoogeSort } from './stooge-sort';
 import { timSort } from './tim-sort';
 import type { AlgorithmDefinition } from './types';
@@ -34,6 +42,12 @@ export const algorithms: AlgorithmDefinition[][] = [
     {
       name: 'Quick Sort',
       function: quickSort,
+      badge: 'Middle Pivot',
+    },
+    {
+      name: 'Quick Sort',
+      function: dualPivotSort,
+      badge: 'Dual Pivot',
     },
     {
       name: 'Shell Sort',
@@ -52,21 +66,18 @@ export const algorithms: AlgorithmDefinition[][] = [
       function: selectionSort,
     },
     {
-      name: 'Radix LSD Sort',
+      name: 'Radix Sort',
       function: radixSort,
+      badge: 'LSD',
     },
     {
-      name: 'Radix MSD Sort',
+      name: 'Radix Sort',
       function: radixSortMSD,
+      badge: 'MSD',
     },
     {
       name: 'Heap Sort',
       function: heapSort,
-    },
-    {
-      name: 'Bitonic Sort',
-      function: bitonicSort,
-      arraySizeComponent: RangeArraySizePowerOfTwo,
     },
     {
       name: 'Tim Sort',
@@ -103,6 +114,11 @@ export const algorithms: AlgorithmDefinition[][] = [
       function: exchangeSort,
     },
     {
+      name: 'Bitonic Sort',
+      function: bitonicSort,
+      arraySizeComponent: RangeArraySizePowerOfTwo,
+    },
+    {
       name: 'Odd Even Sort',
       function: oddEvenSort,
     },
@@ -119,14 +135,44 @@ export const algorithms: AlgorithmDefinition[][] = [
       function: introSort,
     },
     {
-      name: 'Sleep Sort',
-      function: sleepSort,
-      badge: 'new',
+      name: 'Smooth Sort',
+      function: smoothSort,
     },
     {
       name: 'Bucket Sort',
       function: bucketSort,
-      badge: 'new',
+    },
+    {
+      name: 'Flag Sort',
+      function: flagSort,
+    },
+    {
+      name: 'Pigeonhole Sort',
+      function: pigeonholeSort,
+    },
+    {
+      name: 'Selection Sort',
+      function: dualSelectionSort,
+      badge: 'Two-Way',
+    },
+    {
+      name: 'Block Merge Sort',
+      function: blockSort,
     },
   ],
+  [
+    {
+      name: 'Insertion Sort',
+      function: binaryInsertionSort,
+      badge: 'Binary',
+    },
+    {
+      name: 'Circle Sort',
+      function: circleSort,
+    },
+    {
+      name: 'Bead Sort',
+      function: gravitySort,
+    },
+  ]
 ];
