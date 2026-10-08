@@ -42,12 +42,10 @@ export const algorithms: AlgorithmDefinition[][] = [
     {
       name: 'Quick Sort',
       function: quickSort,
-      badge: 'Middle Pivot',
     },
     {
-      name: 'Quick Sort',
+      name: 'Dual Pivot Sort',
       function: dualPivotSort,
-      badge: 'Dual Pivot',
     },
     {
       name: 'Shell Sort',
@@ -66,14 +64,12 @@ export const algorithms: AlgorithmDefinition[][] = [
       function: selectionSort,
     },
     {
-      name: 'Radix Sort',
+      name: 'Radix LSD Sort',
       function: radixSort,
-      badge: 'LSD',
     },
     {
-      name: 'Radix Sort',
+      name: 'Radix MSD Sort',
       function: radixSortMSD,
-      badge: 'MSD',
     },
     {
       name: 'Heap Sort',
@@ -151,9 +147,8 @@ export const algorithms: AlgorithmDefinition[][] = [
       function: pigeonholeSort,
     },
     {
-      name: 'Selection Sort',
+      name: 'Dual Selection Sort',
       function: dualSelectionSort,
-      badge: 'Two-Way',
     },
     {
       name: 'Block Merge Sort',
@@ -162,9 +157,8 @@ export const algorithms: AlgorithmDefinition[][] = [
   ],
   [
     {
-      name: 'Insertion Sort',
+      name: 'Binary Insertion Sort',
       function: binaryInsertionSort,
-      badge: 'Binary',
     },
     {
       name: 'Circle Sort',
