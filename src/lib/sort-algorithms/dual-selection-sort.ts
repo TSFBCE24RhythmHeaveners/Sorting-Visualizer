@@ -29,19 +29,18 @@ export const dualSelectionSort = function* (arr: number[]): SortingGenerator {
       arr[left] = arr[minIndex];
       arr[minIndex] = tmp;
 
+      if (maxIndex === left) {
+        maxIndex = minIndex;
+      } else if (maxIndex === right) {
+        maxIndex = left;
+      }
+
       yield {
         access: [left, minIndex],
         sound: left,
         swaps: 1,
         accesses: 4,
       };
-    }
-
-    if (maxIndex === left) {
-      maxIndex = minIndex;
-    }
-    if (maxIndex === right) {
-      maxIndex = left;
     }
 
     if (maxIndex !== right) {
